@@ -385,7 +385,7 @@ resource "aws_instance" "Myec2" {
                 sudo systemctl enable httpd
                 #echo "This is WEB APPLICATIONS Home page" > /var/www/html/index.html
                 echo "<?php phpinfo();?>" > /var/www/html/index.php
-                echo "You Landed in unidenfied zone. Sorry try again" > /var/www/html/error.html
+                echo "You Landed in unidentified zone. Sorry try again" > /var/www/html/error.html
                 aws s3 cp s3://cloudtech2020/connect.php /var/www/html/
                 EOF
     tags = {
