@@ -35,12 +35,18 @@ And this IAC helps to run the WEB server and DB server in an isolated network an
 12. S3
 
 ## Notes to Run the App
-[In order to run the code, You should have installed the terraform and AWS CLI in your Laptop or Desktop]
+[In order to run the code, You should have installed the terraform and AWS Account, IAM user credentials in your Laptop or Desktop]
 1. Download the Source
+    - git clone <url>
 2. Run the terraform commands 
-    $ terraform init
-    $ terraform plan
-    $terraform apply --auto-approve
-    $terraform destory --auto-approve #if you come across the any issue
+    -   terraform init
+    -   terraform plan
+    -   terraform apply --auto-approve
+    -   terraform destory --auto-approve #if you come across any issue or you're done with testing.
+3. Update the DB endpoint into webserver location/var/www/html/connect.php
+4. Validate the webserver using the EC2 elastic IP address.
+
+
+# FeedBack: rramesh.rsd@gmail.com
 
 
