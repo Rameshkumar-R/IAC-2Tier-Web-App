@@ -131,7 +131,7 @@ resource "aws_security_group" "WASG1" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["49.207.143.242/32"]
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   egress {
@@ -380,7 +380,7 @@ resource "aws_instance" "Myec2" {
     user_data = <<-EOF
                 #!/bin/bash
                 sudo yum update -y
-                sudo yum install httpd php php-mysql -y
+                sudo yum install httpd php php-mysql git -y
                 sudo systemctl start httpd
                 sudo systemctl enable httpd
                 #echo "This is WEB APPLICATIONS Home page" > /var/www/html/index.html
