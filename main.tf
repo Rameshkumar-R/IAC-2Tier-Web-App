@@ -250,7 +250,7 @@ resource "aws_network_acl" "public-subnet-NACL" {
     protocol   = "tcp"
     rule_no    = 300
     action     = "allow"
-    cidr_block = "49.207.143.242/32"
+    cidr_block = "0.0.0.0/0"
     from_port  = 22
     to_port    = 22
   }
@@ -331,7 +331,7 @@ resource "aws_network_acl" "private-subnet-NACL" {
     protocol   = "tcp"
     rule_no    = 300
     action     = "allow"
-    cidr_block = "49.207.143.242/32"
+    cidr_block = "0.0.0.0/0"
     from_port  = 22
     to_port    = 22
   }
