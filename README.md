@@ -43,8 +43,9 @@ And this IAC helps to run the WEB server and DB server in an isolated network an
     -   terraform plan
     -   terraform apply --auto-approve
     -   terraform destory --auto-approve #if you come across any issue or you're done with testing.
-3. Update the DB endpoint into webserver location/var/www/html/connect.php
-4. Validate the webserver using the EC2 elastic IP address.
+3. Use the connect.php file from assets folder. [Which will help to skip the S3Adminrole assignment and copying connect.php]
+4. Update the DB endpoint into webserver location/var/www/html/connect.php
+5. Validate the webserver using the EC2 elastic IP address.
 
 
 # FeedBack: rramesh.rsd@gmail.com

@@ -372,7 +372,7 @@ resource "aws_instance" "Myec2" {
     instance_type = "t2.micro"
     availability_zone = "ap-south-1b"
     key_name = "Myvmkey"
-    iam_instance_profile = "S3AdminRole"
+    #iam_instance_profile = "S3AdminRole"
     network_interface {
         device_index = 0
         network_interface_id = aws_network_interface.WASNIC.id
@@ -386,7 +386,7 @@ resource "aws_instance" "Myec2" {
                 #echo "This is WEB APPLICATIONS Home page" > /var/www/html/index.html
                 echo "<?php phpinfo();?>" > /var/www/html/index.php
                 echo "You Landed in unidentified zone. Sorry try again" > /var/www/html/error.html
-                aws s3 cp s3://cloudtech2020/connect.php /var/www/html/
+                #aws s3 cp s3://cloudtech2020/connect.php /var/www/html/
                 EOF
     tags = {
         Name = "MyAmazonVM"
